@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/league.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<h1>REVEAL.JS</h1>
+				<h2>THE HTML PRESENTATION FRAMEWORK</h2>
+			</section>
+			<!-- Horizontal Slides  -->
+			<section>
+				<p>reveal.js enables you to create beautiful interactive slide decks using HTML.</p>
+			</section>
+			<section>
+				Why online presentation ?
+				<div class="fragment fade-in test">
+					<img src="./assets/2000px-Microsoft_PowerPoint_2013_logo.svg.png" alt="Microsoft powerpoint logo">
+					<img src="./assets/googleSlide.png" alt="Google Slide Logo">
+					<img src="./assets/prezi-logo-for-share.png" alt="Prezi Logo">
+				</div>
+				<p class="fragment fade-in-then-semi-out">Presentation apps can't handle web languages.</p>
+				<p class="fragment fade-in">Reaveal.js gives full power of web browser.</p>
+				<p class="fragment fade-in">It lets you load any JS library.</p>
+			</section>
+
+			<section>
+				<p>So, that was horizontal slides</p>
+				<p>Now, lets see some vertical slides</p>
+			</section>
+
+			<!-- Vertical Slides Start -->
+			<section>
+				<section>
+					<h2>VERTICAL SLIDES</h2>
+					<p>Slides can be nested inside of each other.</p>
+					<p>Use the <em>Space key</em> to navigate through all slides.</p>
+				</section>
+				<section>
+					<p class="fragment shrink">Yeahhhh..... like this</p>
+					<p class="fragment grow">Now let me show you what i meant by this</p>
+					<div class="fragment fade-in-then-semi-out">
+						<div class="arrow arrow-first"></div>
+						<div class="arrow arrow-second"></div>
+					</div>
+					<div class="fragment fade-in codeImageContainer">
+						<img class="codeImage" src="./test/assets/verticalSlide.JPG"
+							alt="Vertical slides code block image">
+					</div>
+				</section>
+			</section>
+			<section>
+				<p>Markdown Sample</p>
+				<!-- Code -->
+				<section data-markdown>
+					<script type="text/template">
+						```php
+						public function foo()
+						{
+							$foo = array(
+							'bar' => 'bar'
+						)
+						}
+						```
+					</script>
+				</section>
+			</section>
+
+			<section>
+				<h3 class="fragment shrink">Regular html code unlike any presentational app</h3>
+				<div>
+					<form action="http://localhost:8000/?fname=Naveen&lname=Last+Name#/6">
+						<label for="fname">First Name:</label><br>
+						<input type="text" id="fname" name="fname"><br>
+						<label for="lname">Last name:</label><br>
+						<input type="text" id="lname" name="lname"><br><br>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</section>
+			<section>
+				<h2>Touch Optimized</h2>
+				<p>Presentation looks great on touch devices, like any <em>mobile phones</em> and <em>tablets</em>.
+					Simply swipe through your slides.
+				</p>
+			</section>
+			<section>
+				<section>
+					<h2>Fragments</h2>
+					<p>Fragments are used to highlight individual elements on a slide. Every element with the class
+						fragment will be stepped through before moving on to the next slide.</p>
+				</section>
+				<section>
+					<p>Lets see some example</p>
+				</section>
+				<section>
+					<p class="fragment">Fragment 1</p>
+					<p class="fragment">Fragment 2</p>
+				</section>
+				<section>
+					<p class="fragment grow">grow</p>
+					<p class="fragment shrink">shrink</p>
+					<p class="fragment strike">strike</p>
+					<p class="fragment fade-out">fade-out</p>
+					<p class="fragment fade-up">fade-up (also down, left and right!)</p>
+					<p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
+					<p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
+					<p class="fragment highlight-current-blue">blue only once</p>
+				</section>
+			</section>
+			<section>
+				<h2>TRANSITION STYLES</h2>
+				<p>You can select from different transitions, like:
+					<li>None</li>
+					<li>Fade</li>
+					<li>Slide</li>
+					<li>Convex</li>
+					<li>Concave</li>
+					<li>Zoom</li>
+				</p>
+			</section>
+			<section>
+				<p>Zoom Effect !</p>
+			</section>
+			<section data-transition="zoom">
+				<h2>This slide will override the presentation transition and zoom!</h2>
+				<p>Next is slow speed</p>
+			</section>
+			<section data-transition-speed="slow">
+				<h2>Choose from three transition speeds: default, fast or <em>slow!</em></h2>
+				<p>Now, next is convex transition</p>
+			</section>
+			<section data-transition="convex">
+				<p>Convex transition !</p>
+				<p>Next is Slide </p>
+			</section>
+			<section data-transition="slide">
+				<p>Slide Transition !</p>
+				<p>Next is concave</p>
+			</section>
+			<section data-transition="concave">
+				<p>Concave Transition !</p>
+				<p>Next is fade</p>
+			</section>
+			<section data-transition="fade-in-then-semi-out">
+				<p>This is fade</p>
+			</section>
+			<section data-notes="Something important">
+				<p class="fragment fade-in-then-grow">Press <em class="fragment fade-in-then-shrink">S</em></p>
+				<h2 class="fragment fade-in-then-semi-out">Speaker Notes</h2>
+				<p class="fragment fade-in-then-semi-out">Thats how you see speaker notes.</p>
+
+				<aside class="notes">
+					<p>Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you
+						open the speaker notes window (hit »S« on your keyboard).</p>
+				</aside>
+			</section>
+			<section>
+				<h3>Basic setup</h3>
+				<li class="fragment" data-fragment-index="1">Download the latest version of reveal.js from
+					https://github.com/hakimel/reveal.js/releases</li>
+				<li class="fragment" data-fragment-index="2">Unzip and replace the example contents in index.html with
+					your own
+				</li>
+				<li class="fragment" data-fragment-index="3">Open index.html in a browser to view it
+					</p>
+			</section>
+			<section>
+				<p>Thank you everyone</p>
+				<h3 class="fragment highlight-green">REVEAL.JS</h3>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/wave/webcam-swiper-0.1.js' }, { src: 'plugin/wave/client.js' },
+			]
+		});
+	</script>
+</body>
+
+</html>
